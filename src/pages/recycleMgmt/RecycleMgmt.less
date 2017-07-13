@@ -1,0 +1,82 @@
+.neo-recycle-mgmt{
+	width: 700px;
+	height: 400px;
+	margin: 90px auto 0;
+	color: #333;
+	font-size: 12px;
+
+	.neo-recycle-mgmt-tips {
+		margin-bottom: 30px;
+		font-size: 13px;
+		font-weight: bold;
+		& > span {
+			color: #999;
+			font-weight: normal;
+			& > a {
+				color: #ff0000;
+			}
+		}
+	}
+	.neo-recycle-mgmt-form-body {
+		width: 500px;
+		margin: auto;
+		.neo-recycle-mgmt-form-line-wrapper {
+			.neo-recycle-mgmt-form-line {
+				.neo-label {
+					font-weight: bold;
+					width: 100px;
+				}
+				input {
+					padding: 0.2em 0.5em;
+					width: 70px;
+					margin-right: 5px;
+					text-align: center;
+					border: 1px solid #ccc;
+					height: 24px;
+					&.neo-input-error {
+						border-color: red;
+					}
+				}
+				.neo-button {
+					border-radius: 2px;
+					font-size: 12px;
+					padding: 0.2em 0.8em;
+					margin-left: 10px;
+					height:24px;
+				}
+			}
+			.neo-form-line-err-msg {
+				margin-left: 100px;
+				line-height: 25px;
+				height: 30px;
+				color: red;
+			}
+		}
+		.neo-recycle-mgmt-form-checkbox {
+			padding-left: 100px;
+			.rc-checkbox {
+				margin-right: 5px;
+				.rc-checkbox-input{
+					margin:0 0 0 0;
+				}
+			}
+			span{
+				vertical-align: top;
+			}
+
+		}
+		.neo-recycle-mgmt-submit {
+			margin-left: 100px;
+			width: 190px;
+			margin-top: 6px;
+			height: 36px;
+		}
+	}
+
+	.neo-page-err-msg {
+		min-height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+}

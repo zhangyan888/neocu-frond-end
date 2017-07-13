@@ -1,0 +1,35 @@
+.neo-search{
+  .rc-select {
+    margin-right: -1px;
+    &:hover,
+    &.rc-select-focused {
+      z-index: 3;
+    }
+    .rc-select-selection {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px;
+      height: 30px;
+      line-height: 30px;
+    }
+  }
+  .neo-input {
+    position: relative;
+    z-index: 2;
+  }
+  .neo-button {
+    position: relative;
+    margin-left: -1px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    padding: 0;
+    line-height: 30px;
+    height: 30px;
+    width: 32px;
+    .iconfont {
+      font-size: 16px;
+      line-height: 28px;
+    }
+  }
+}

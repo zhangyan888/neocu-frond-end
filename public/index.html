@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<!--<link href="/demo.css" type="text/css" rel="stylesheet">-->
+	<script src="/es6-promise.auto.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script src="/fetch.js"></script>
+<script src="/react-with-addons.js"></script>
+<script src="/react-dom.js"></script>
+<script src="/react-dom-server.js"></script>
+<script src="/Recharts.js"></script>
+<script src="/jquery.min.js"></script>
+<script src="/polyfill.min.js"></script>
+<script>
+	(function(){
+		//horizon 函数
+		horizon = {};
+		horizon.alert = function (type, msg) {
+			alert(type + ':' + msg);
+		};
+		// i18n
+		window.gettext = function(msg){return msg};
+		window.i18n = gettext;
+		window.env = 'dev';
+
+    // 自定义数据
+    (function(){
+      window.volume_id = 'bb2d0e6d-bc7b-4785-b7a4-c58afb4a9506';
+      window.projectId = 'projectId-demo';
+    })();
+
+		window.orchestrateConfig = {
+			id: "73f69e0a-6a12-4216-9025-6eed107635d6",
+			name: "dsfsdf",
+			timeout: "10",
+			status: "CREATE_COMPLETE",
+			template: "[]&amp;[{&quot;blockId&quot;:&quot;uiharddisk_0&quot;,&quot;blockUid&quot;:&quot;0&quot;,&quot;blockClass&quot;:&quot;uiharddisk&quot;,&quot;blockText&quot;:&quot;云硬盘一&quot;,&quot;blockX&quot;:108,&quot;blockY&quot;:37,&quot;blockSub&quot;:[&quot;1&quot;,&quot;test_01&quot;],&quot;blockParams&quot;:{&quot;name&quot;:&quot;云硬盘一&quot;,&quot;volume&quot;:1,&quot;_id&quot;:&quot;uiharddisk_0&quot;,&quot;volume_type&quot;:&quot;test_01&quot;,&quot;volume_type_name&quot;:&quot;test_01&quot;}}]&amp;[{&quot;scale&quot;:1,&quot;top&quot;:&quot;0px&quot;,&quot;left&quot;:&quot;0px&quot;}]"
+		};
+
+		window.orchestrateConfig = null;
+
+		// 处理路径
+		var pageName = document.location.pathname;
+		pageName = pageName.substring(pageName.lastIndexOf('/')+1);
+		if(pageName===''){
+			pageName = 'user';
+		}
+
+		var head = document.head || document.getElementsByTagName('head')[0];
+		var body = document.body || document.getElementsByTagName('body')[0];
+
+		var link = document.createElement('link');
+		link.setAttribute('href', '/' + pageName + '/'+pageName +'.css');
+		link.setAttribute('type', 'text/css');
+		link.setAttribute('rel', 'stylesheet');
+		head.appendChild(link);
+
+		var script = document.createElement('script');
+		script.setAttribute('src', '/' + pageName + '/'+pageName+'.js');
+		body.appendChild(script);
+	})();
+
+</script>
+<!--<script src="/demo.js"></script>-->
+</body>
+</html>

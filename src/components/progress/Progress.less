@@ -1,0 +1,77 @@
+
+@import "../../app/variables.less";
+
+.neo-progress {
+  width: 100%;
+  background-color: #f5f5f5;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  border-radius: 3px;
+  height: 16px;
+  margin-bottom: 15px;
+  &.neo-progress-round {
+    border-radius: 8px;
+  }
+  &.neo-progress-large {
+    height: 24px;
+    &.neo-progress-round {
+      border-radius: 12px;
+    }
+  }
+  &.neo-progress-small {
+    height: 8px;
+    &.neo-progress-round {
+      border-radius: 4px;
+    }
+  }
+  .neo-progress-bar {
+    float: left;
+    height: 100%;
+    width: 30%;
+    background-color: #00a0c1;
+    box-shadow: inset 0 -1px 2px rgba(0, 0, 0, 0.15);
+    transition: all .6s ease;
+    // border-radius: 3px;
+    &.neo-progress-bar-primary {
+      background-color: @primary;
+    }
+    &.neo-progress-bar-info {
+      background-color: @info;
+    }
+    &.neo-progress-bar-success {
+      background-color: @success;
+    }
+    &.neo-progress-bar-warning {
+      background-color: @warning;
+    }
+    &.neo-progress-bar-danger {
+      background-color: @danger;
+    }
+    .sr-only {
+      position: absolute;
+      visibility: hidden;
+    }
+  }
+  
+  &.neo-progress-striped .neo-progress-bar {
+    background-image: linear-gradient(45deg,rgba(255,255,255,.15) 25%,transparent 25%,transparent 50%,rgba(255,255,255,.15) 50%,rgba(255,255,255,.15) 75%,transparent 75%,transparent);
+    background-size: 40px 40px;
+  }
+  &.active  .neo-progress-bar {
+    animation: progress-bar-stripes 2s linear infinite;
+  }
+}
+// Bar animations
+// -------------------------
+
+// WebKit
+@-webkit-keyframes progress-bar-stripes {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}
+
+// Spec and IE10+
+@keyframes progress-bar-stripes {
+  from  { background-position: 40px 0; }
+  to    { background-position: 0 0; }
+}

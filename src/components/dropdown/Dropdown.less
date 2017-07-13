@@ -1,0 +1,72 @@
+/**
+ * Created on 2017/05/06.
+ */
+ 
+@import "../../app/variables.less";
+
+@dropdownMenu-hover-bg: #e3f2fd;
+
+.neo-dropdown {
+     position: relative;
+     display: inline-block;
+     > a {
+         cursor: pointer;
+         color: @link-color;
+         &:hover {
+             color: @link-hover-color;
+         }
+     }
+     > .neo-button {
+        .iconfont {
+            margin-left: @base;
+        }
+     }
+     .neo-dropdownMenu {
+         position: absolute;
+         left: 0;
+         display: none;
+         z-index: 1002;
+         min-width: 10em;
+         border-radius: @border-radius;
+         border: 1px solid @border-color;
+         box-shadow: 0 0 5px fade(@black, 20%);
+         background-color: @white;
+         margin: 1px 0;
+         font-size: 12px;
+         li {
+             a {
+                 cursor: pointer;
+                 display: block;
+                 padding: @base @base * 2;
+                 line-height: @base * 2;
+                 color: @text-body;
+                 text-decoration: none;
+                 font-size: 12px;
+                 &:hover {
+                     background-color: @dropdownMenu-hover-bg;
+                 }
+             }
+             &.disabled {
+                 a {
+                     cursor: not-allowed;
+                     color: @text-disable;
+                     &:hover {
+                         background: none;
+                     }
+                 }
+             }
+         }
+         &.neo-bottomRight {
+             right: 0;
+             left: auto;
+         }
+         &.neo-bottomCenter {
+             left: 0;
+             right: 0;
+             min-width: 100%;
+         }
+     }
+     &.neo-open .neo-dropdownMenu {
+         display: block;
+     }
+ }

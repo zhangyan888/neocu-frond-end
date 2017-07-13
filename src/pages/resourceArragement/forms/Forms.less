@@ -1,0 +1,506 @@
+.neo-form-vlan {
+	.neo-ip-error {
+		height: 30px;
+		line-height: 30px;
+		padding-left: 1em;
+		color: red;
+	}
+	.neo-form-vlan-ip {
+		display: inline-block;
+		width: calc(~"100% - 14em");
+		p {
+			height: 30px;
+			line-height: 30px;
+			padding-left: 1em;
+			margin-bottom: 10px;
+			background: #efefef;
+			border: 1px solid #efefef;
+			box-shadow: 0 0 2px #ccc;
+			border-radius: 2px;
+			position: relative;
+			cursor: pointer;
+			&:last-of-type {
+				margin-bottom: 0;
+			}
+			&:hover {
+				border-color: #00a0c1;
+			}
+			& > i {
+				position: absolute;
+				bottom: 0;
+				right: 0;
+				font-size: 12px;
+				color: white;
+				height: 1em;
+				line-height: 1em;
+				z-index: 2;
+				transform: translate(2px, 3px);
+				display: none;
+			}
+			&:after {
+				content: '';
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 0 0 1em 1em;
+				border-color: transparent transparent #00a0c1 transparent;
+				position: absolute;
+				right: 0;
+				bottom: 0;
+				display: none;
+			}
+			&.ip-selected {
+				border-color: #00a0c1;
+				box-shadow: 0 0 2px #4caf50;
+				& > i {
+					display: inline-block;
+				}
+				&:after {
+					display: block;
+				}
+			}
+			a {
+				i {
+					margin: 3px;
+				}
+				span {
+					display: inline-block;
+					letter-spacing: 1px;
+					&:last-child {
+						margin-left: 3px;
+					}
+				}
+				input {
+					width: 3em;
+					border: none;
+					text-align: center;
+					border-radius: 3px;
+					line-height: initial;
+					line-height: normal;
+				}
+			}
+		}
+	}
+	.neo-form-vlan-pools {
+		display: inline-block;
+		width: calc(~"100% - 14em");
+		& > a {
+			width: 10%;
+			display: inline-block;
+			text-align: center;
+		}
+		p {
+			display: inline-block;
+			height: 30px;
+			line-height: 30px;
+			background: #efefef;
+			padding: 0 1em;
+			letter-spacing: 1px;
+			width: 45%;
+			border-radius: 3px;
+			white-space: nowrap;
+			i {
+				margin: 0 3px;
+			}
+			input {
+				width: 3em;
+				display: inline-block;
+				border: none;
+				text-align: center;
+				border-radius: 3px;
+				line-height: initial;
+				line-height: normal;
+			}
+		}
+	}
+	.neo-form-vlan-getway {
+		& > p {
+			display: inline-block;
+			width: calc(~"100% - 14em");
+			line-height: 30px;
+			height: 30px;
+			letter-spacing: 1px;
+			background: #efefef;
+			border-radius: 3px;
+			padding-left: 1em;
+		}
+	}
+}
+
+.neo-form-banalce {
+	.neo-form-balance-ha {
+		.rc-select {
+			margin-bottom: 0;
+			&.rc-select-disabled .rc-select-selection{
+				background: #eee;
+			}
+		}
+		.neo-form-error {
+			height: 30px;
+			line-height: 30px;
+			padding-left: 1em;
+			color: red;
+			width: calc(100% - 14em);
+			margin-left: 11em;
+			display: inline-block;
+		}
+	}
+
+}
+
+.neo-form-balance-listener {
+	min-height: 500px;
+}
+.disabled{
+	color:#ccc;
+}
+
+.neo-ui-dialog {
+	.neo-tabs {
+		width: 90%;
+		.neo-tabs-title {
+			justify-content: flex-start;
+			border-width: 1px;
+			.title.active{
+				border-width: 1px;
+				margin-bottom: -1px;
+			}
+		}
+		.neo-tabs-panel {
+			margin-top: 30px;
+			.neo-tab-panel {
+				.neo-form-line {
+					margin: auto;
+				}
+			}
+		}
+	}
+}
+
+.neo-form-listen-policy {
+	padding: 20px 30px;
+	height: 450px;
+	.neo-form-create-btn {
+		align-self: flex-start;
+	}
+	.neo-btn-center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+	.rc-collapse {
+		width: 100%;
+		background: white;
+		border: none;
+		.rc-collapse-item {
+			margin: 10px 0;
+			border: none;
+			.rc-collapse-header {
+				background: #e4f0ff;
+				white-space: nowrap;
+				color: #333;
+				height: 30px;
+				line-height: 30px;
+				.arrow {
+					float: none;
+				}
+				& > p {
+					display: inline-block;
+					width: calc(~"100% - 28px");
+					text-indent: 5px;
+					& > i {
+						float: right;
+						text-indent: 0;
+						padding: 0 0.5em;
+						cursor: pointer;
+						font-size: 18px;
+						&:hover {
+							color: #000;
+						}
+					}
+				}
+			}
+		}
+	}
+	.neo-form-policy {
+		.neo-form {
+			padding: 0;
+			.neo-form-line {
+				width: 90%;
+			}
+			.neo-label {
+				font-weight: bold;
+			}
+		}
+		.neo-form-table-policy {
+			font-size: 12px;
+			.rc-select-height-fix(@add: 0) {
+				height: 22px + @add;
+				line-height: 22px + @add;
+			}
+			.rc-select {
+				width: 80%;
+				.rc-select-height-fix(2px);
+				.rc-select-selection--single {
+					.rc-select-height-fix();
+					border-radius: 0;
+				}
+				.rc-select-selection__rendered {
+					.rc-select-height-fix();
+				}
+				.rc-select-arrow {
+					top: -1px;
+					.rc-select-height-fix();
+				}
+			}
+			.neo-form-rule-new-btn {
+				background: #e4f0ff;
+				white-space: nowrap;
+				color: #3b7dd2;
+				height: 30px;
+				line-height: 30px;
+				text-align: center;
+				margin-top: 5px;
+				cursor: pointer;
+				& > .iconfont {
+					font-size: 10px;
+					line-height: 17px;
+					margin-right: 3px;
+				}
+			}
+			.neo-button {
+				line-height: 22px;
+				height: 22px;
+				padding: 0 1em;
+				font-size: 12px;
+				border-radius: 0;
+			}
+			.neo-input {
+				width: 80%;
+				height: 22px;
+				vertical-align: middle;
+				padding: 0.2em 0.3em;
+				font-size: 12px;
+			}
+		}
+		table {
+			thead {
+				background: #eee;
+				th {
+					text-align: center;
+				}
+			}
+			tr {
+				line-height: 30px;
+				height: 30px;
+				td {
+					text-align: center;
+				}
+			}
+		}
+		.rc-table-placeholder {
+			line-height: 30px;
+			height: 30px;
+		}
+	}
+}
+
+.neo-dropdown-mini {
+	li.rc-select-dropdown-menu-item {
+		font-size: 12px;
+		padding: 0.45em 0.8em;
+	}
+}
+
+.neo-form-table {
+	.rc-select {
+		width: 100%;
+	}
+
+	.rc-table {
+		margin-top: 10px;
+		table {
+			thead.rc-table-thead {
+				line-height: 40px;
+				height: 40px;
+				background: #dddddd;
+				tr {
+					th {
+						text-align: center;
+						font-weight: bold;
+					}
+				}
+			}
+			tbody.rc-table-tbody {
+				.rc-select {
+					width: 80%;
+				}
+				.neo-input {
+					width: 80%;
+				}
+				tr {
+					height: 40px;
+					&:nth-child(even) {
+						background: #f6f6f6;
+					}
+					td {
+						vertical-align: middle;
+						text-align: center;
+						.neo-button {
+							padding: 0 1em;
+							font-size: 12px;
+							height: 24px;
+							line-height: 24px;
+						}
+					}
+				}
+				.neo-form-table-error {
+					border-color: red;
+				}
+			}
+		}
+		.rc-table-placeholder {
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+		}
+	}
+	.neo-form-table-header {
+		width: 100%;
+		white-space: nowrap;
+		.neo-form-create-btn {
+			font-size: 12px;
+			margin-left: 20px;
+			line-height: 24px;
+			height: 24px;
+			padding: 0 1em;
+			align-self: flex-start;
+			vertical-align: top;
+			&.disabled {
+				background: #666;
+				border-color: #666;
+			}
+		}
+		& > span {
+			margin-left: 10px;
+		}
+		.neo-form-table-err-msg {
+			display: inline-block;
+			margin-left: 1em;
+			color: red;
+			width: calc(~"100% - 100px");
+			white-space: initial;
+			line-height: 20px;
+		}
+	}
+}
+
+.neo-form-firewall-rule {
+	.neo-tmpl {
+		width: calc(~"100% - 14em");
+		display: inline-block;
+		line-height: 30px;
+		margin-bottom: 25px;
+		& > a {
+			height: 28px;
+			line-height: 28px;
+			border: 1px solid #00a0c1;
+			border-radius: 3px;
+			padding: 0 1em;
+			color: #00a0c1;
+			display: inline-block;
+			margin-right: 5px;
+			transition: all 0.5s;
+			margin-bottom: 5px;
+			cursor: pointer;
+			&:hover {
+				background: #00a0c1;
+				color: white;
+			}
+		}
+	}
+	.neo-form-line {
+		.neo-port-range {
+			width: calc(~"100% - 14em");
+			display: inline-block;
+			line-height: 30px;
+			& > input {
+				width: 45%;
+				display: inline-block;
+			}
+			& > span {
+				display: inline-block;
+				width: 10%;
+				text-align: center;
+			}
+		}
+		.neo-port-range-err-msg {
+			margin-left: 11em;
+			line-height: 30px;
+			height: 30px;
+			color: red;
+		}
+	}
+}
+
+.neo-form-firewall-rules {
+	min-height: 300px;
+	max-height: 60%;
+	table {
+		thead.rc-table-thead {
+			line-height: 40px;
+			height: 40px;
+			background: #dddddd;
+			color: #676a6c;
+			tr {
+				th {
+					text-align: center;
+					font-weight: bold;
+				}
+			}
+		}
+		tbody.rc-table-tbody {
+			tr {
+				height: 40px;
+				&:nth-child(even) {
+					background: #f6f6f6;
+				}
+				td {
+					vertical-align: middle;
+					text-align: center;
+					.neo-button {
+						padding: 0 1em;
+						font-size: 12px;
+						height: 24px;
+						line-height: 24px;
+					}
+				}
+			}
+		}
+	}
+	.rc-table-placeholder {
+		height: 100px;
+		line-height: 100px;
+		text-align: center;
+	}
+}
+
+.neo-form-pptp, .neo-form-openvpn {
+	.neo-textarea {
+		margin-bottom: 30px;
+	}
+	.neo-form-checkbox {
+		.neo-label {
+			margin-left: 0.5em;
+			height: auto;
+		}
+	}
+}
+
+.neo-form-pptp-users {
+	.rc-table {
+		margin-left: 20px;
+		margin-right: 20px;
+	}
+}

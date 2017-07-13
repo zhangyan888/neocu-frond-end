@@ -1,0 +1,41 @@
+.neo-subPage{
+	border: #ccc solid 1px;
+	box-shadow: 0 3px 0 0 #e7e7e7;
+	background: white;
+	margin-top: 20px;
+	padding: 30px 20px 45px 20px;
+	min-height: 300px;
+
+	.neo-subPage-title {
+		height: 30px;
+		line-height: 30px;
+		border-bottom: 1px solid #ddd;
+		margin: 0;
+		font-size: 14px;
+		color: #333;
+		font-weight: bold;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			width: 3px;
+			height: 14px;
+			background: #4aa0c5;
+			margin: -2px 5px 0 10px;
+			vertical-align: middle;
+		}
+	}
+	.neo-subPage-body {
+		.neo-err-msg {
+			min-height: 200px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+}

@@ -1,0 +1,65 @@
+.neo-entity-list{
+	font-size: 13px;
+	background: white;
+	border: 1px solid #ccc;
+	box-shadow: 0 3px 0 0 #e7e7e7;
+	.rc-table {
+		padding-top: 20px;
+		table {
+			width: 100%;
+			thead {
+				tr {
+					th {
+						padding-bottom: 15px;
+						text-align: center;
+						border-bottom: 1px solid #ddd;
+					}
+				}
+			}
+			tbody {
+				tr {
+					td {
+						border-bottom: 1px solid #ddd;
+						padding: 0.8em 0;
+						text-align: center;
+					}
+					&:nth-child(2n) {
+						background: #f9f9f9;
+					}
+					&:hover {
+						background-color: #f2f6fb;
+					}
+				}
+			}
+		}
+	}
+	.neo-entity-list-page {
+		padding: 20px;
+		font-size: 12px;
+		& > p {
+			display: inline-block;
+			float: right;
+			& > a {
+				border: 1px solid #ccc;
+				padding: 3px;
+				cursor: pointer;
+				&.disable{
+					color: #ddd;
+					cursor: not-allowed;
+				}
+				&:first-child {
+					border-top-left-radius: 3px;
+					border-bottom-left-radius: 3px;
+					border-right: none;
+				}
+				&:last-child {
+					border-top-right-radius: 3px;
+					border-bottom-right-radius: 3px;
+				}
+				& > i {
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+
+@import "../../app/variables.less";
+
+
+.rc-pagination-item,
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-jump-prev,
+.rc-pagination-jump-next  {
+  border-radius: @border-radius;
+  min-width: @base * 3;
+  height: @base * 3;
+  line-height: @base * 3;
+}
+.rc-pagination-item,
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-options-quick-jumper input {
+  border-color: @border-color;
+}
+.rc-pagination-item a,
+.rc-pagination-prev,
+.rc-pagination-next,
+.rc-pagination-jump-prev,
+.rc-pagination-jump-next {
+  color: @text-body;
+}
+.rc-pagination-item:hover,
+.rc-pagination-options-quick-jumper input:hover {
+  border-color: @primary;
+}
+.rc-pagination-item:hover a,
+.rc-pagination-jump-prev:hover:after,
+.rc-pagination-jump-next:hover:after {
+  color: @primary;
+}
+
+.rc-pagination-item-active a {
+  color: #fff;
+}
+.rc-pagination-item-active:hover a {
+  color: #fff;
+}
+.rc-pagination-item-active {
+  background-color: @primary;
+  border-color: @primary;
+}
+.rc-pagination-disabled a {
+  color: @text-disable;
+}

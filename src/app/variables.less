@@ -1,0 +1,73 @@
+@black: #000;
+@white: #fff;
+
+// primary颜色
+@primary: #1e88e5;
+@primary-hover: #2196f3;
+@primary-active: #1976d2;
+@primary-loading: #64b5f6;
+@primary-selected: #e1f5fe; 
+
+// info颜色
+@info: #5bc0de;
+@info-hover: #31b095;
+@info-active: #d32f2f;
+// @info-border-color: #46b8da;
+// @info-hover-border-color: #269abc;
+
+// danger颜色
+@danger: #e53935;
+@danger-hover: #f44336;
+@danger-active: #d32f2f;
+
+// warning颜色
+@warning: #ffb300;
+@warning-hover: #ffb300;
+@warning-active: #ffb300;
+
+// default颜色
+@default:#fafafa;
+@default-border-color:#cdd6e1;
+
+// success颜色
+@success: #5cb85c;
+@success-hover: #31b095;
+@success-active: #5cb85c;
+// @success-border-color: #4cae4c;
+
+// disabled 背景色、边框色、字体颜色
+@disable-bg: #f5f5f5;
+@disable-border: @border-color;
+@disable-text: @text-disable;
+
+// 普通边框颜色
+@border-color: lighten(@black, 88%);  // #e0e0e0
+
+// 文本链接
+@link-color:            @primary-hover;
+@link-hover-color:      @primary-active;
+
+// 字体颜色 之 --------------------------------------------------------------------
+// 浅色背景下
+@text-headline: fade(@black, 85%);
+@text-title: fade(@black, 75%);
+@text-body: fade(@black, 65%);
+@text-caption: fade(@black, 40%);
+@text-disable: fade(@black, 25%);
+// 深色背景下
+@text-headline-white: fade(@white, 100%);
+@text-title-white: fade(@white, 95%);
+@text-body-white: fade(@white, 90%);
+@text-caption-white: fade(@white, 55%);
+@text-disable-white: fade(@white, 35%);
+
+// 基础距离
+@base: 8px;
+
+// 圆角大小
+@border-radius: 3px;
+
+@font-size-base: 12px;
+
+// hover时颜色切换
+@trans: all .3s ease;

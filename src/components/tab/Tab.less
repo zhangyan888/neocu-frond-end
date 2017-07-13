@@ -1,0 +1,32 @@
+.neo-tabs{
+	width: 80%;
+	margin:0 auto;
+	.neo-tabs-title{
+		display: flex;
+		justify-content: center;
+		line-height: 50px;
+		height: 50px;
+		color: #555;
+		border-bottom: 2px solid #ccc;
+		.title{
+			display: inline-block;
+			border: none;
+			background: white;
+			padding:0.6em 1em;
+			cursor: pointer;
+			&.active{
+				border-bottom: 2px solid #333;
+				margin-bottom: -2px;
+			}
+		}
+
+	}
+	.neo-tabs-panel {
+		.neo-tab-panel {
+			display: none;
+			&.neo-tab-active {
+				display: block;
+			}
+		}
+	}
+}

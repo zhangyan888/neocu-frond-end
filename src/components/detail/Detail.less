@@ -1,0 +1,34 @@
+@import "../../app/variables.less";
+.neo-detail {
+    .neo-detail-title {
+        border-bottom: 1px solid @border-color;
+        padding: @base;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .neo-title {
+            font-size: 14px;
+            color: @text-title;
+            font-weight: bold;
+        }
+    }
+    .neo-detail-list {
+        padding: @base * 2 @base;
+        line-height: @base * 2;
+        color: @text-body;
+        dl {
+            display: flex;
+            margin-bottom: @base;
+            dt {
+                flex-basis: 10em;
+                text-align: right;
+                font-size: 12px;
+            }
+            dd {
+                flex-grow: 1;
+                flex-shrink: 1;
+                font-size: 12px;
+            }
+        }
+    }
+}

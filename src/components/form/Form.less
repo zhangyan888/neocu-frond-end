@@ -1,0 +1,51 @@
+.neo-input {
+	background-color: #FFFFFF;
+	background-image: none;
+	border: 1px solid #e5e6e7;
+	border-radius: 1px;
+	color: #333;
+	display: inline-block;
+	height: 30px;
+	padding: 6px 12px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	font-size: 13px;
+	&:focus {
+		border-color: #ccc;
+	}
+	&:hover {
+		border-color: #00a0c1;
+	}
+	&.warning {
+		border-color: red;
+	}
+	&[type='radio']{display: inline-block; width: auto !important;}
+}
+
+.neo-textarea {
+	width: 100%;
+	height: 100px;
+	border: 1px solid #e5e6e7;
+	line-height: 1.5em;
+	padding: 6px 12px;
+	transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+	&:focus {
+		border-color: #00a0c1;
+	}
+	&:hover {
+		border-color: #00a0c1;
+	}
+}
+
+input {
+	-moz-appearance: textfield;
+	&[type='radio']{ float: left; margin: 6px 4px 0 0;}
+}
+
+.rc-table-placeholder {
+	height: 100px;
+	line-height: 100px;
+	text-align: center;
+}
+.radioButtonList{ display: inline-block;
+  label{ line-height: 30px;display: inline-block;}
+} 

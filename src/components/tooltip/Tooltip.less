@@ -1,0 +1,114 @@
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.neo-tooltip {
+  position: relative;
+  display: inline-block;
+  > a {
+    color: #2196f3;
+    cursor: default;
+  }
+  .neo-tips-content {
+    position: absolute;
+    bottom: 100%;
+    margin-bottom: 12px;
+    left: 0;
+    right: 0;
+    z-index: 1006;
+    display: flex;
+    justify-content: center;
+    animation: fadeIn .3s ease;
+    .neo-tips {
+      padding: 8px 16px;
+      border-radius: 3px;
+      background-color: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      white-space: nowrap;
+      position: relative;
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        margin-left: -5px;
+        border-style: solid;
+        border-color: transparent;
+        border-width: 5px 5px 0;
+        border-top-color: rgba(0, 0, 0, 0.8);
+      }
+    }
+  }
+  &.neo-tooltip-bottom {
+    .neo-tips-content {
+      margin-top: 12px;
+      top: 100%;
+      bottom: auto;
+      .neo-tips {
+        &::after {
+          top: -5px;
+          bottom: auto;
+          border-width: 0 5px 5px;
+          border-color: transparent;
+          border-bottom-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+  &.neo-tooltip-left {
+    .neo-tips-content {
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-right: 12px;
+      top: 0;
+      bottom: 0;
+      left: auto;
+      right: 100%;
+      .neo-tips {
+        &::after {
+          bottom: auto;
+          top: 50%;
+          left: auto;
+          right: -5px;
+          margin-top: -5px;
+          margin-left: 0;
+          border-width: 5px 0 5px 5px;
+          border-color: transparent;
+          border-left-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+  &.neo-tooltip-right {
+    .neo-tips-content {
+      justify-content: flex-start;
+      align-items: center;
+      margin-bottom: 0;
+      margin-top: 0;
+      margin-left: 12px;
+      top: 0;
+      bottom: 0;
+      left: 100%;
+      right: auto;
+      .neo-tips {
+        &::after {
+          bottom: auto;
+          top: 50%;
+          right: auto;
+          left: -5px;
+          margin-top: -5px;
+          margin-left: 0;
+          border-width: 5px 5px 5px 0;
+          border-color: transparent;
+          border-right-color: rgba(0, 0, 0, 0.8);
+        }
+      }
+    }
+  }
+}

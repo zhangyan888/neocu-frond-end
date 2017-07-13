@@ -1,0 +1,113 @@
+.neo-form {
+	font-size: 12px;
+	color: #676a6c;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 0;
+	.neo-form-line {
+		width: 80%;
+		.neo-label {
+			vertical-align: top;
+			line-height: 30px;
+			width: 10em;
+			margin-right: 1em;
+			white-space: nowrap;
+		}
+		.neo-form-group, .rc-select {
+			display: inline-block;
+			width: calc(~"100% - 14em");
+		}
+		.neo-input{
+			font-size: inherit;
+			width: 100%;
+		}
+		.neo-input:disabled {
+			background: #efefef;
+			&:hover {
+				border-color: #e5e6e7;
+			}
+		}
+		.rc-select {
+			margin-bottom: 30px;
+		}
+		.neo-validation-error {
+			height: 30px;
+			display: block;
+			line-height: 30px;
+			color: red;
+			white-space: nowrap;
+		}
+	}
+	.rc-select {
+		.rc-select-selection {
+			border-radius: 0;
+		}
+	}
+}
+
+.neo-textarea {
+	font-size: 12px;
+	width: calc(~"100% - 14em");
+}
+
+.neo-form-checkbox.neo-form-line {
+	padding-left: 11em;
+	.neo-label {
+		display: inline-block;
+		height: 30px;
+		line-height: 30px;
+		width: initial;
+		width: auto;
+		vertical-align: top;
+	}
+	.neo-input {
+		display: inline;
+		width: initial;
+		width: auto;
+		padding: 0;
+		margin: 0;
+	}
+}
+
+.neo-validated {
+	.required {
+		.neo-input {
+			border-color: red;
+		}
+	}
+}
+
+.neo-confirm {
+	line-height: 30px;
+	padding: 1em;
+}
+
+.neo-form-delete {
+	line-height: 2em;
+	padding: 2em 1em;
+}
+
+.neo-hidden {
+	display: none;
+}
+
+.neo-entity{
+	display: flex;
+	padding: 1em;
+	flex-direction: column;
+	.neo-entity-option {
+		& > p {
+			display: inline-block;
+		}
+		.neo-search {
+			display: inline-block;
+			float: right;
+		}
+	}
+}
+
+.rc-select-dropdown {
+	position: fixed;
+}
